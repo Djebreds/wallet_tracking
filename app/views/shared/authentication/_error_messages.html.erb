@@ -1,0 +1,13 @@
+<% if alert = flash[:alert] %>
+  <p class="py-2 px-3 mt-2 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block" id="alert"><%= alert %></p>
+<% end %>
+
+<% if notice = flash[:notice] %>
+  <p class="py-2 px-3 mt-2 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+<% end %>
+
+<% if local_assigns.has_key? :user %>
+  <% if user.errors.any? %>
+    <p class="py-2 px-3 mt-2 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block" id="alert"><%= user.errors.full_messages.first %></p>
+  <% end %>
+<% end %>

@@ -1,0 +1,11 @@
+<% if authenticated? %>
+  <h1>Logined</h1>
+<% end %>
+
+<% if authenticated? %>
+  <%= form_with url: session_path, method: :delete do |form| %>
+    <%= form.submit 'Logout' %>
+  <% end %>
+<% else %>
+  <%= link_to 'Sign in', new_session_path %>
+<% end %>

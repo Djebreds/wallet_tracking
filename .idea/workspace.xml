@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="" />
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/authentication.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/registrations/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/shared/authentication/_error_messages.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/passwords_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/passwords_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/passwords/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/passwords/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/passwords/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/passwords/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,23 +31,32 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2pYTkiLarFjL0Q3EMYaupaKdTw2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.JavaScript&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/shared/auth" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.wallet_tracking">
     <configuration name="wallet_tracking" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="wallet_tracking" />
@@ -129,7 +152,8 @@
       <updated>1732942154180</updated>
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
-      <workItem from="1732948936221" duration="10982000" />
+      <workItem from="1732948936221" duration="11371000" />
+      <workItem from="1733073260358" duration="8959000" />
     </task>
     <servers />
   </component>

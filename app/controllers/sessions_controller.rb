@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   allow_unauthenticated_access only: %i[ new create ]
+  before_action :check_session, only: %i[ new create ]
   rate_limit to: 10, within: 3.minutes, only: :create, with: -> { redirect_to new_session_url, alert: "Try again later." }
+
+  layout 'authentication'
 
   def new
   end
@@ -16,6 +19,12 @@ class SessionsController < ApplicationController
 
   def destroy
     terminate_session
-    redirect_to new_session_path
+    redirect_to root_path
+  end
+
+  private
+
+  def check_session
+    redirect_to root_path, notice: "You are already signed!" if authenticated?
   end
 end
