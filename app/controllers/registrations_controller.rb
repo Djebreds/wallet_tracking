@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# Handles registration page
 class RegistrationsController < ApplicationController
-  allow_unauthenticated_access only: [:new, :create]
+  allow_unauthenticated_access only: %i[new create]
   before_action :check_session
 
   layout 'authentication'
@@ -13,7 +16,7 @@ class RegistrationsController < ApplicationController
 
     if @user.save
       start_new_session_for @user
-      redirect_to root_path, notice: 'Successfully signed up.'
+      redirect_to root_path, notice: t('auth.success_signup')
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,6 +29,6 @@ class RegistrationsController < ApplicationController
   end
 
   def check_session
-    redirect_to root_path, notice: "You are already signed!" if authenticated?
+    redirect_to root_path, notice: t('auth.already_authenticated') if authenticated?
   end
 end
