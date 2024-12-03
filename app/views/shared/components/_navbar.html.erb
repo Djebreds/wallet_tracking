@@ -8,10 +8,6 @@
   </div>
   <div class="mx-3 flex space-x-2 items-center">
     <% if authenticated? %>
-      <%= link_to '#', class: 'font-normal text-xs bg-green-500 p-1 rounded-lg items-center text-white sm:flex gap-2 truncate' do %>
-        <%= heroicon 'currency-dollar', options: { class: 'w-5 h-5' } %>
-        Rp. 999.999.999
-      <% end %>
       <%= link_to '#', class: 'font-normal text-sm bg-yellow-500 p-1 rounded-lg text-white' do %>
         <%= heroicon 'shopping-cart', options: { class: 'w-5 h-5' } %>
       <% end %>
