@@ -1,0 +1,27 @@
+<div class="flex justify-between space-x-4">
+  <div class="my-5">
+    <div class="pt-2 relative mx-auto text-gray-600">
+      <%= form_with method: :get do |form| %>
+        <%= form.select :category,
+                        options_from_collection_for_select(filter, :id, :name, selected: params[:category]),
+                        { prompt: 'Select Category' },
+                        onchange: 'this.form.submit();',
+                        class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500' %>
+      <% end %>
+    </div>
+  </div>
+  
+  <div class="my-5">
+    <div class="pt-2 relative mx-auto text-gray-600">
+      <%= form_with method: :get do |form| %>
+        <%= form.search_field :search, class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500',
+                              placeholder: 'Search...',
+                              value: params[:search],
+                              onblur: 'this.form.submit();' %>
+      <% end %>
+      <button type="button" class="absolute right-0 top-0 mt-5 mr-4">
+        <%= heroicon 'magnifying-glass', options: { class: 'h-4 w-4' } %>
+      </button>
+    </div>
+  </div>
+</div>

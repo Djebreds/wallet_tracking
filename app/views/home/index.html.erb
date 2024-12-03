@@ -1,36 +1,43 @@
 <section class="h-screen mt-[5rem] mx-5">
   <div class="max-w-[55rem] mx-auto">
-    <div class="flex justify-between">
-      <div class="group">
-        <h1 class="font-semibold">Hello, <%= current_user.name %></h1>
-        <h4 class="font-normal text-sm">Welcome to wallet tracking application</h4>
-      </div>
-      <div class="group flex gap-3 items-center">
+    <% if authenticated? %>
+      <div class="flex justify-between">
         <div class="group">
-          <h6 class="text-sm font-semibold hidden sm:block">Current Balance</h6>
-          <h6 class="text-sm font-semibold block sm:hidden">Balance</h6>
-          <h6 class="text-sm">Rp. 999.999.999</h6>
+          <h1 class="font-semibold">Hello, <%= current_user.name %></h1>
+          <h4 class="font-normal text-sm">Welcome to wallet tracking application</h4>
         </div>
-        <div class="h-10 w-[2px] bg-indigo-500"></div>
-        <%= link_to '#', class: 'bg-green-500 text-white p-1 font-normal text-xs rounded-lg items-center' do %>
-          <%= heroicon 'arrow-up-on-square', options: { class: 'w-8 h-8 sm:w-10 sm:h-10' } %>
-        <% end %>
+        <div class="group flex gap-3 items-center">
+          <div class="group">
+            <h6 class="text-sm font-semibold hidden sm:block">Current Balance</h6>
+            <h6 class="text-sm font-semibold block sm:hidden">Balance</h6>
+            <h6 class="text-sm">$ <%= current_user.credit %></h6>
+          </div>
+          <div class="h-10 w-[2px] bg-indigo-500"></div>
+          <%= link_to '#', class: 'bg-green-500 text-white p-1 font-normal text-xs rounded-lg items-center' do %>
+            <%= heroicon 'arrow-up-on-square', options: { class: 'w-8 h-8 sm:w-10 sm:h-10' } %>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
     <div class="text-center mt-10">
       <h2 class="text-2xl font-bold">Products</h2>
     </div>
   </div>
   <div class="max-w-[60rem] mx-auto mt-5">
     <div>
-      <%= render 'shared/components/search_bar' %>
+      <%= render 'shared/components/filter', filter: @categories %>
     </div>
-    <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
-      <%= render 'shared/components/product_card' %>
-      <%= render 'shared/components/product_card' %>
-      <%= render 'shared/components/product_card' %>
-      <%= render 'shared/components/product_card' %>
-      <%= render 'shared/components/product_card' %>
+    <% if @products.present? %>
+      <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
+        <% @products.each do |product| %>
+          <%= render 'shared/components/product_card', product: %>
+        <% end %>
+      </div>
+    <% else %>
+      <h2 class="text-center">Opps...! There are no products with the name "<%= params[:search] %>".</h2>
+    <% end %>
+    <div class="flex justify-center py-10">
+      <%== pagy_nav(@pagy) %>
     </div>
   </div>
 </section>

@@ -1,15 +1,17 @@
-<div class="flex w-full max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-white">
-  <a class="flex h-60 overflow-hidden rounded-xl" href="#">
-    <img class="object-cover" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="product image" />
+<div class="flex w-full max-w-xs flex-col overflow-hidden rounded-xl border border-gray-100 bg-white h-80">
+  <a class="flex h-40 overflow-hidden rounded-t-xl" href="#">
+    <%= image_tag product.image_url, alt: product.name, class: 'object-cover mx-auto' %>
   </a>
-  <div class="mt-2 px-3 pb-3">
+  <div class="flex flex-col justify-between flex-grow px-3 pb-3">
     <a href="#">
-      <h5 class="font-semibold">Nike Air MX Super 2500 - Red</h5>
+      <h5
+        class="font-semibold text-gray-800 line-clamp-2"
+        title="<%= product.name %>">
+        <%= product.name %>
+      </h5>
     </a>
-    <div class="mt-2 mb-5 flex items-center justify-between">
-      <p>
-        <span class="font-bold text-red-500">Rp. 999.999.999</span>
-      </p>
+    <div class="mt-2 mb-5">
+      <h3 class="text-xl"><span class="font-bold text-red-500">$ <%= product.price %></span></h3>
     </div>
     <a href="#" class="flex items-center justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white">
       Add to cart
