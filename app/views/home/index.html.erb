@@ -1,4 +1,4 @@
-<section class="h-screen mt-10 mx-5">
+<section class="h-screen mt-[5rem] mx-5">
   <div class="max-w-[55rem] mx-auto">
     <div class="flex justify-between">
       <div class="group">
@@ -22,6 +22,9 @@
     </div>
   </div>
   <div class="max-w-[60rem] mx-auto mt-5">
+    <div>
+      <%= render 'shared/components/search_bar' %>
+    </div>
     <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
       <%= render 'shared/components/product_card' %>
       <%= render 'shared/components/product_card' %>
