@@ -53,7 +53,13 @@ gem 'thruster', require: false
 # gem "image_processing", "~> 1.2"
 #
 # Rails View Helpers for Heroicons.
-gem "heroicon"
+gem 'heroicon'
+
+# Simple, efficient background processing for Ruby
+gem 'sidekiq'
+
+# Light weight job scheduling extension for Sidekiq
+gem 'sidekiq-scheduler'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

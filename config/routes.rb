@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'sidekiq/web'
+require 'sidekiq-scheduler/web'
+
 Rails.application.routes.draw do
   resource :registration, only: %i[new create]
   resource :session
@@ -16,4 +19,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
+  Rails.application.routes.draw do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end

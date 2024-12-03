@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sidekiq/product/fetch_products_job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/sidekiq/product/fetch_products_job.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/schedule.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/sidekiq.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +40,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/initializers" />
       <recent name="$PROJECT_DIR$/app/views/shared/auth" />
     </key>
   </component>
@@ -141,7 +146,7 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="30047000" />
+      <workItem from="1733073260358" duration="33603000" />
     </task>
     <servers />
   </component>

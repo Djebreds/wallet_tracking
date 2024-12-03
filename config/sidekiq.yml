@@ -1,0 +1,5 @@
+:scheduler:
+  :schedule:
+    fetch_products:
+      cron: '0 * * * *'
+      class: Fetch::ProductsJob
