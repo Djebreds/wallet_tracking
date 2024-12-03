@@ -61,6 +61,12 @@ gem 'sidekiq'
 # Light weight job scheduling extension for Sidekiq
 gem 'sidekiq-scheduler'
 
+# HTTP/REST API client library.
+gem 'faraday'
+
+# Bulk insert extension for ActiveRecord
+gem 'activerecord-import'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'

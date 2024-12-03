@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: add description to product table">
+      <change afterPath="$PROJECT_DIR$/app/sidekiq/product_jobs/fetch_product_job.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sidekiq/fetch/products_job.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sidekiq.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/sidekiq.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sidekiq/fetch/products_job_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/sidekiq/product_jobs/fetch_product_job_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,11 +149,33 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="36237000" />
+      <workItem from="1733073260358" duration="41748000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: add image url to product table">
+      <option name="closed" value="true" />
+      <created>1733240704562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733240704562</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add description to product table">
+      <option name="closed" value="true" />
+      <created>1733240723331</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733240723331</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add image url to product table" />
+    <MESSAGE value="feat: add description to product table" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add description to product table" />
   </component>
 </project>
