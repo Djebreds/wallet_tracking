@@ -1,0 +1,30 @@
+<nav class="border sticky top-5 items-center max-w-[35rem] bg-white mx-auto p-3 rounded-full flex justify-between">
+  <div class="mx-3">
+    <h5 class="font-semibold text-indigo-600">WalleTrack</h5>
+  </div>
+  <div class="text-sm space-x-2">
+    <%= link_to 'Products', class: 'font-normal text-sm active:underline active:underline-offset-8 active:decoration-2' %>
+    <%= link_to 'Transactions', class: 'font-normal text-sm active:underline active:underline-offset-8 active:decoration-2' if authenticated? %>
+  </div>
+  <div class="mx-3 flex space-x-2 items-center">
+    <% if authenticated? %>
+      <%= link_to '#', class: 'font-normal text-xs bg-green-500 p-1 rounded-lg items-center text-white sm:flex gap-2 truncate' do %>
+        <%= heroicon 'currency-dollar', options: { class: 'w-5 h-5' } %>
+        Rp. 999.999.999
+      <% end %>
+      <%= link_to '#', class: 'font-normal text-sm bg-yellow-500 p-1 rounded-lg text-white' do %>
+        <%= heroicon 'shopping-cart', options: { class: 'w-5 h-5' } %>
+      <% end %>
+      <div class="h-5 w-[2px] bg-indigo-500"></div>
+      <%= form_with url: session_path, method: :delete do |form| %>
+        <%= button_tag type: 'submit', class: 'bg-red-500 text-sm align-middle p-1 rounded-lg text-white' do %>
+          <%= heroicon 'arrow-right-on-rectangle', options: { class: 'w-5 h-5' } %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= link_to 'Sign in', new_session_path, class: 'font-normal text-sm' %>
+      <div class="h-5 w-[2px] bg-indigo-500"></div>
+      <%= link_to 'Sign up', new_registration_path, class: 'font-normal text-sm' %>
+    <% end %>
+  </div>
+</nav>
