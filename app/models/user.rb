@@ -15,11 +15,12 @@ class User < ApplicationRecord
     update!(credit: credit + amount)
   end
 
-  def create_transaction(user, amount, transaction_type)
+  def create_transaction(user, amount, transaction_type, payment_method)
     transactions.create!(
       user_id: user.id,
       amount:,
       transaction_type:,
+      payment_method: payment_method
     )
   end
 end

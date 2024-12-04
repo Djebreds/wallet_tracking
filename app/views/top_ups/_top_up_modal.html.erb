@@ -1,11 +1,20 @@
 <%= form_with url: top_up_path, class: 'space-y-5 grid', method: :post do |form| %>
-  <div class="group grid">
-    <%= form.label :amount %>
-    <%= form.number_field :amount, required: true,
-                          placeholder: 'Enter amount',
-                          class: 'rounded-lg focus:border-indigo-600',
-                          step: '0.01',
-                          max: '99999,99' %>
+  <div class="group grid gap-3">
+    <div class="group grid">
+      <%= form.label :amount %>
+      <%= form.number_field :amount, required: true,
+                            placeholder: 'Enter amount',
+                            class: 'rounded-lg focus:border-indigo-600',
+                            step: '0.01',
+                            max: '99999,99' %>
+    </div>
+    <div class="group grid">
+      <%= form.label :payment_method, 'Payment Method' %>
+      <%= form.select :payment_method,
+                      options_for_select(Transaction.payment_methods.keys.map { |key| [key.humanize, key] }),
+                      { prompt: 'Select payment method' },
+                      { class: 'rounded-lg focus:border-indigo-600', required: true } %>
+    </div>
   </div>
   <div class="group grid space-y-5">
     <%= form.submit 'Top up', class: 'bg-indigo-600 text-white p-2 rounded-lg' %>

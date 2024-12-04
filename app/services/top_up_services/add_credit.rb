@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
 module TopUpServices
-
   # Perform top up credit for user
   class AddCredit < ApplicationService
-    def initialize(user, amount)
+    def initialize(user, amount, payment_method)
       @user = user
       @amount = amount
+      @payment_method = payment_method
     end
 
     def call
       raise ArgumentError, 'Amount must be greater than zero' unless valid_amount?
 
       user.update_credit(@amount)
-      user.create_transaction(@user, @amount, :top_up)
+      user.create_transaction(@user, @amount, :top_up, @payment_method)
     end
 
     private

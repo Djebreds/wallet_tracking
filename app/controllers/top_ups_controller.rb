@@ -6,13 +6,13 @@ class TopUpsController < ApplicationController
 
   def create
     amount = top_up_params[:amount].to_d
-    Rails.logger.info "Amount received: #{amount.inspect}"
-    if invalid_amount?(amount)
-      flash[:alert] = 'Amount must be a valid positive number.'
-      redirect_to root_path and return
-    end
+    payment_method = top_up_params[:payment_method]
 
-    TopUpServices::AddCredit.call(current_user, amount)
+    redirect_to root_path, alert: 'Amount must be a valid positive number.' if invalid_amount?(amount)
+
+    redirect_to root_path, alert: 'Invalid payment method' unless invalid_payment_method?(payment_method)
+
+    TopUpServices::AddCredit.call(current_user, amount, payment_method)
 
     redirect_to root_path, notice: 'Your credit has been successfully updated!'
   end
@@ -20,10 +20,14 @@ class TopUpsController < ApplicationController
   private
 
   def top_up_params
-    params.permit(:amount)
+    params.permit(:amount, :payment_method)
   end
 
   def invalid_amount?(amount)
     !amount.is_a?(Numeric) || amount <= 0
+  end
+
+  def invalid_payment_method?(payment_method)
+    Transaction.payment_methods.key?(payment_method)
   end
 end
