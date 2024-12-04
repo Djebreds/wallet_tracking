@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="chore: configure stimulus hotwire">
-      <change afterPath="$PROJECT_DIR$/app/views/products/_show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shared/components/_modal.html.erb" afterDir="false" />
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: implement deposit user credit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_product_card.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_product_card.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/top_up" />
       <recent name="$PROJECT_DIR$/config/initializers" />
       <recent name="$PROJECT_DIR$/app/views/shared/auth" />
     </key>
@@ -146,7 +143,7 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="62891000" />
+      <workItem from="1733073260358" duration="75435000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add image url to product table">
       <option name="closed" value="true" />
@@ -188,7 +185,87 @@
       <option name="project" value="LOCAL" />
       <updated>1733279891728</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: create modal component">
+      <option name="closed" value="true" />
+      <created>1733292628836</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733292628836</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: update reference column on transaction user">
+      <option name="closed" value="true" />
+      <created>1733305611558</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305611558</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: update decimal precision number on product and user table">
+      <option name="closed" value="true" />
+      <created>1733305770812</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305770812</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: update decimal precision number on product and user table">
+      <option name="closed" value="true" />
+      <created>1733305779497</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305779497</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: update transaction model">
+      <option name="closed" value="true" />
+      <created>1733305825536</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305825536</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: update user model">
+      <option name="closed" value="true" />
+      <created>1733305829988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305829988</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: alert and notice component">
+      <option name="closed" value="true" />
+      <created>1733305849678</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305849678</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: fix rubocop linter">
+      <option name="closed" value="true" />
+      <created>1733305911713</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305911713</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor: update base class for service">
+      <option name="closed" value="true" />
+      <created>1733305930280</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733305930280</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: implement deposit user credit">
+      <option name="closed" value="true" />
+      <created>1733306105640</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733306105640</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +277,15 @@
     <MESSAGE value="feat: change cron job to every one hour" />
     <MESSAGE value="feat: implement searching, filtering and pagination for products" />
     <MESSAGE value="chore: configure stimulus hotwire" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: configure stimulus hotwire" />
+    <MESSAGE value="feat: create modal component" />
+    <MESSAGE value="feat: update reference column on transaction user" />
+    <MESSAGE value="feat: update decimal precision number on product and user table" />
+    <MESSAGE value="feat: update transaction model" />
+    <MESSAGE value="feat: update user model" />
+    <MESSAGE value="feat: alert and notice component" />
+    <MESSAGE value="refactor: fix rubocop linter" />
+    <MESSAGE value="refactor: update base class for service" />
+    <MESSAGE value="feat: implement deposit user credit" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement deposit user credit" />
   </component>
 </project>
