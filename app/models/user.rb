@@ -20,7 +20,8 @@ class User < ApplicationRecord
       user_id: user.id,
       amount:,
       transaction_type:,
-      payment_method: payment_method
+      payment_method:,
+      status: :confirmed
     )
   end
 end

@@ -8,6 +8,16 @@ class Transaction < ApplicationRecord
 
   enum :transaction_type, {
     top_up: 'top-up',
-    purchase: 'purchase',
+    purchase: 'purchase'
+  }
+
+  enum :payment_method, {
+    in_app_top_up: 'in-app-top-up'
+  }
+
+  enum :status, {
+    confirmed: 'confirmed',
+    failed: 'failed',
+    canceled: 'canceled'
   }
 end
