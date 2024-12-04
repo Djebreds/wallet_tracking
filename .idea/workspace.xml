@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: add description to product table">
-      <change afterPath="$PROJECT_DIR$/config/initializers/pagy.rb" afterDir="false" />
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="chore: configure stimulus hotwire">
+      <change afterPath="$PROJECT_DIR$/app/views/products/_show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/shared/components/_modal.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/shared/components/_product_card.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_product_card.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_search_bar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_filter.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sidekiq.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/sidekiq.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +146,7 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="48261000" />
+      <workItem from="1733073260358" duration="62891000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add image url to product table">
       <option name="closed" value="true" />
@@ -171,7 +164,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733240723331</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: change cron job to every one hour">
+      <option name="closed" value="true" />
+      <created>1733248513302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733248513302</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: implement searching, filtering and pagination for products">
+      <option name="closed" value="true" />
+      <created>1733248581980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733248581980</updated>
+    </task>
+    <task id="LOCAL-00005" summary="chore: configure stimulus hotwire">
+      <option name="closed" value="true" />
+      <created>1733279891728</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733279891728</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +197,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add image url to product table" />
     <MESSAGE value="feat: add description to product table" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add description to product table" />
+    <MESSAGE value="feat: change cron job to every one hour" />
+    <MESSAGE value="feat: implement searching, filtering and pagination for products" />
+    <MESSAGE value="chore: configure stimulus hotwire" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: configure stimulus hotwire" />
   </component>
 </project>

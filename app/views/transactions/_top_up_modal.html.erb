@@ -1,0 +1,17 @@
+<%= form_with url: '#', class: 'space-y-5 grid' do |form| %>
+  <div class="group grid">
+    <%= form.label :email_address %>
+    <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: 'username', placeholder: 'Enter your email address', value: params[:email_address], class: 'rounded-lg focus:border-indigo-600' %>
+  </div>
+  <div class="group grid">
+    <%= form.label :password %>
+    <%= form.password_field :password, required: true, autocomplete: 'current-password', placeholder: 'Enter your password', class: 'rounded-lg focus:border-indigo-600' %>
+  </div>
+  <div class="group flex">
+    <%= link_to 'Forgot password?', new_password_path, class: 'text-sm ms-auto text-indigo-600' %>
+  </div>
+  <div class="group grid space-y-5">
+    <%= form.submit 'Sign in', class: 'bg-indigo-600 text-white p-2 rounded-lg' %>
+    <%= link_to 'Sign up', new_registration_path, class: 'outline outline-2 outline-indigo-500 p-2 text-center rounded-lg text-indigo-600' %>
+  </div>
+<% end %>

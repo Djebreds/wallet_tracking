@@ -30,7 +30,18 @@
     <% if @products.present? %>
       <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
         <% @products.each do |product| %>
-          <%= render 'shared/components/product_card', product: %>
+          <%= render 'shared/components/product_card', product: product %>
+          <%= render('shared/components/modal', title: product.name, param: "product_details_modal_#{product.id}") do %>
+            <%= render 'products/show', product: product %>
+            <% content_for :additional_button, flush: true do %>
+              <a
+                href="#"
+                class="flex items-center justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white"
+              >
+                Add to cart
+              </a>
+            <% end %>
+          <% end %>
         <% end %>
       </div>
     <% else %>

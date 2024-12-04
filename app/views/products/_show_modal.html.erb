@@ -1,0 +1,21 @@
+<div class="grid sm:flex sm:justify-around gap-5 align-middle items-center">
+  <div class="bg-white p-2 overflow-hidden">
+    <%= image_tag product.image_url, alt: product.name, class: 'mx-auto object-contain h-48 w-96' %>
+  </div>
+  <div class="grid max-w-[21rem] gap-2">
+    <h3 class="font-semibold"><%= product.name %></h3>
+    <h3 class="font-bold text-red-500 text-3xl">$ <%= product.price %></h3>
+    <div class="group">
+      <span class="font-semibold">Category:</span>
+      <h5 class="font-normal text-md">
+        <%= product.category.name %>
+      </h5>
+    </div>
+    <div class="group">
+      <span class="font-semibold">Description:</span>
+      <h5 class="font-normal text-md">
+        <%= product.description %>
+      </h5>
+    </div>
+  </div>
+</div>
