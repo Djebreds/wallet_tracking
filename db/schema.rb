@@ -41,12 +41,12 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_03_154133) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.string "transaction_type"
     t.decimal "amount", precision: 10, scale: 2, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_transactions_on_users_id"
+    t.index ["user_id"], name: "index_transactions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,5 +61,5 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_03_154133) do
 
   add_foreign_key "products", "product_categories", column: "category_id"
   add_foreign_key "sessions", "users"
-  add_foreign_key "transactions", "users", column: "users_id"
+  add_foreign_key "transactions", "users"
 end
