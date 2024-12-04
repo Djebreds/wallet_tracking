@@ -5,7 +5,7 @@ class ApplicationService
   delegate :t, to: :I18n
 
   def self.call(*)
-    instance = new(*args)
+    instance = new(*)
     instance.call
     instance
   end
