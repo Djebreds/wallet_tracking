@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: implement deposit user credit">
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: add payment method to top up functionality">
+      <change afterPath="$PROJECT_DIR$/app/views/shared/components/_header.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/_show_modal.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/_transaction_card.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/transactions/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/transaction.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/transaction.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_filter.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_filter.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_navbar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_product_card.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product_card.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +55,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/products" />
       <recent name="$PROJECT_DIR$/app/views/top_up" />
       <recent name="$PROJECT_DIR$/config/initializers" />
       <recent name="$PROJECT_DIR$/app/views/shared/auth" />
@@ -143,7 +157,7 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="75435000" />
+      <workItem from="1733073260358" duration="85154000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add image url to product table">
       <option name="closed" value="true" />
@@ -265,7 +279,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733306105640</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: create stimulus controller for flash">
+      <option name="closed" value="true" />
+      <created>1733306427331</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733306427331</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: add payment method to transaction table">
+      <option name="closed" value="true" />
+      <created>1733322776265</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733322776265</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add payment method to top up functionality">
+      <option name="closed" value="true" />
+      <created>1733322848152</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733322848152</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +324,9 @@
     <MESSAGE value="refactor: fix rubocop linter" />
     <MESSAGE value="refactor: update base class for service" />
     <MESSAGE value="feat: implement deposit user credit" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement deposit user credit" />
+    <MESSAGE value="feat: create stimulus controller for flash" />
+    <MESSAGE value="feat: add payment method to transaction table" />
+    <MESSAGE value="feat: add payment method to top up functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add payment method to top up functionality" />
   </component>
 </project>

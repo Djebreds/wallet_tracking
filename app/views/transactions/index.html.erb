@@ -1,0 +1,27 @@
+<section class="h-screen mt-[5rem] mx-5">
+  <%= render 'shared/components/header', title: 'Transactions History' %>
+  <div class="max-w-[60rem] mx-auto mt-5">
+    <div>
+      <%= render 'shared/components/filter', search: false, filter: { field: :type, collections: @transaction_types, placeholder: 'Select Type' } %>
+    </div>
+    <% if @transactions.present? %>
+      <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
+        <% @transactions.each do |transaction| %>
+          <%= render 'transaction_card', transaction: %>
+          <%= render 'shared/components/modal', title: transaction.transaction_type, param: "transaction_details_modal_#{transaction.id}" do %>
+            <%#= render 'transactions/show_modal', transaction: %>
+          <% end %>
+        <% end %>
+      </div>
+    <% else %>
+      <% if params[:type].present? %>
+        <h2 class="text-center">Opps...! There are no transactions with type <span class="italic font-bold"><%= params[:type] %></span></h2>
+      <% else %>
+        <h2 class="text-center">There are no transactions.</h2>
+      <% end %>
+    <% end %>
+    <div class="flex justify-center py-10">
+      <%== pagy_nav(@pagy) %>
+    </div>
+  </div>
+</section>
