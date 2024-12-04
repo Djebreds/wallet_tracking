@@ -22,7 +22,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_03_154133) do
 
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
-    t.decimal "price", precision: 8, scale: 2, null: false
+    t.decimal "price", precision: 10, scale: 2, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id", null: false
@@ -53,7 +53,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_03_154133) do
     t.string "email_address", null: false
     t.string "password_digest", null: false
     t.string "name", null: false
-    t.decimal "credit", precision: 8, scale: 2, default: "0.0", null: false
+    t.decimal "credit", precision: 10, scale: 2, default: "0.0", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
