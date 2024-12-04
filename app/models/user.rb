@@ -9,4 +9,17 @@ class User < ApplicationRecord
   normalizes :email_address, with: ->(e) { e.strip.downcase }
 
   validates :email_address, presence: true, uniqueness: { case_sensitive: false }
+  validates :credit, numericality: { greater_than_or_equal_to: 0 }
+
+  def update_credit(amount)
+    update!(credit: credit + amount)
+  end
+
+  def create_transaction(user, amount, transaction_type)
+    transactions.create!(
+      user_id: user.id,
+      amount:,
+      transaction_type:,
+    )
+  end
 end
