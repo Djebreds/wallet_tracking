@@ -10,7 +10,7 @@ module ProductJobs
   class FetchProductJob
     include Sidekiq::Job
 
-    def perform(*args)
+    def perform(*_args)
       products = fetch_products
       return if products.nil?
 
