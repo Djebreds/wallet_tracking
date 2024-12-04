@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
+  resource :top_up, only: %i[create]
   Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end

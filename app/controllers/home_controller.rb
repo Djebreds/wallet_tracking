@@ -11,9 +11,7 @@ class HomeController < ApplicationController
       products_query = products_query.where('name ILIKE :search', search: "%#{params[:search]}%")
     end
 
-    if params[:category].present?
-      products_query = products_query.where(category_id: params[:category])
-    end
+    products_query = products_query.where(category_id: params[:category]) if params[:category].present?
 
     @pagy, @products = pagy(products_query, page: params[:page], limit: 8)
 

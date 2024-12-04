@@ -1,5 +1,6 @@
 <section class="h-screen mt-[5rem] mx-5">
   <div class="max-w-[55rem] mx-auto">
+    <%= render 'shared/components/alert_and_notification' %>
     <% if authenticated? %>
       <div class="flex justify-between">
         <div class="group">
@@ -13,8 +14,11 @@
             <h6 class="text-sm">$ <%= current_user.credit %></h6>
           </div>
           <div class="h-10 w-[2px] bg-indigo-500"></div>
-          <%= link_to '#', class: 'bg-green-500 text-white p-1 font-normal text-xs rounded-lg items-center' do %>
+          <button type="button" class="bg-green-500 text-white p-1 font-normal text-xs rounded-lg items-center" data-controller="modal" data-action="click->modal#show" data-modal-dialog-param="top_up_modal">
             <%= heroicon 'arrow-up-on-square', options: { class: 'w-8 h-8 sm:w-10 sm:h-10' } %>
+          </button>
+          <%= render 'shared/components/modal', title: 'Top up', param: 'top_up_modal' do %>
+            <%= render 'top_ups/top_up_modal' %>
           <% end %>
         </div>
       </div>
@@ -32,7 +36,7 @@
         <% @products.each do |product| %>
           <%= render 'shared/components/product_card', product: product %>
           <%= render('shared/components/modal', title: product.name, param: "product_details_modal_#{product.id}") do %>
-            <%= render 'products/show', product: product %>
+            <%= render 'products/show_modal', product: product %>
             <% content_for :additional_button, flush: true do %>
               <a
                 href="#"
@@ -45,7 +49,11 @@
         <% end %>
       </div>
     <% else %>
-      <h2 class="text-center">Opps...! There are no products with the name "<%= params[:search] %>".</h2>
+      <% if params[:search].present? %>
+        <h2 class="text-center">Opps...! There are no products with the name "<%= params[:search] %>".</h2>
+      <% else %>
+        <h2 class="text-center">There are no products.</h2>
+      <% end %>
     <% end %>
     <div class="flex justify-center py-10">
       <%== pagy_nav(@pagy) %>
