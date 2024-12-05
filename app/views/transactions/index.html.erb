@@ -2,7 +2,26 @@
   <%= render 'shared/components/header', title: 'Transactions History' %>
   <div class="max-w-[60rem] mx-auto mt-5">
     <div>
-      <%= render 'shared/components/filter', search: false, filter: { field: :type, collections: @transaction_types, placeholder: 'Select Type' } %>
+      <%= render 'shared/components/filter',
+                 search: false,
+                 filter: [
+                   {
+                   field: :type,
+                   collections: @transaction_types,
+                   placeholder: 'Select Type'
+                  },
+                  {
+                   field: :status,
+                   collections: @statuses,
+                   placeholder: 'Select Status'
+                  },
+                 ],
+                 date_filter: {
+                   start_field: :start_date,
+                   end_field: :end_date,
+                   start_placeholder: 'Start Date',
+                   end_placeholder: 'End Date'
+                 }  %>
     </div>
     <% if @transactions.present? %>
       <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
