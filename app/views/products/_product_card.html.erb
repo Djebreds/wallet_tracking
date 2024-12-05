@@ -11,8 +11,8 @@
     <div class="mt-2 mb-5">
       <h3 class="text-xl"><span class="font-bold text-red-500">$ <%= product.price %></span></h3>
     </div>
-    <a href="#" class="flex items-center justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white">
-      Add to cart
-    </a>
+    <%= form_with(url: add_item_cart_path(product_id: product.id), method: :post, class: 'inline-block') do |form| %>
+      <%= form.submit 'Add to cart', class: 'flex items-center inline-block justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white cursor-pointer' %>
+    <% end %>
   </div>
 </div>

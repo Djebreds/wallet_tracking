@@ -1,0 +1,24 @@
+<div class="flex h-[4rem] gap-2 overflow-hidden rounded-lg border px-2 py-1">
+  <%= image_tag item.product.image_url, alt: item.product.name, class: 'object-cover mx-auto cursor-pointer p-1', loading: 'lazy' %>
+  <div class="group space-y-2 truncate">
+    <h5 class="truncate text-sm max-w-[8rem]"><%= item.product.name %></h5>
+    <div class="flex justify-between">
+      <h5 class="font-semibold text-red-500">$ <%= item.product.price %></h5>
+      <h5 class="font-semibold text-sm">x <%= item.quantity %></h5>
+    </div>
+  </div>
+  <div class="group space-y-2 truncate">
+    <button type="button" class="text-red-500" data-controller="modal" data-action="click->modal#show" data-modal-dialog-param="cart_delete_product_<%= item.id %>">
+      <%= heroicon 'trash', options: { class: 'w-5 h-5' } %>
+    </button>
+  </div>
+</div>
+
+<%= render 'shared/components/modal', title: item.product.name, param: "cart_delete_product_#{item.id}" do %>
+  <h3 class="text-xl">Are you sure want to remove this item from the cart?</h3>
+  <% content_for :additional_button, flush: true do %>
+    <%= form_with url: remove_item_cart_path(item_id: item.id), method: :delete do |form| %>
+      <%= form.submit 'Delete', class: 'flex items-center justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white' %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -2,6 +2,7 @@
 
 class TransactionsController < ApplicationController
   before_action :authenticated?
+  before_action :set_cart, if: :authenticated?
 
   def index
     @transaction_types = humanize_transaction_types

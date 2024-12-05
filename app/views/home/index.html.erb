@@ -23,12 +23,9 @@
           <%= render 'shared/components/modal', title: product.name, param: "product_details_modal_#{product.id}" do %>
             <%= render 'products/show_modal', product: %>
             <% content_for :additional_button, flush: true do %>
-              <a
-                href="#"
-                class="flex items-center justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white"
-              >
-                Add to cart
-              </a>
+              <%= form_with(url: add_item_cart_path(product_id: product.id), method: :post, class: 'inline-block') do |form| %>
+                <%= form.submit 'Add to cart', class: 'flex items-center inline-block justify-center rounded-md bg-indigo-500 px-5 py-2.5 text-center text-sm font-medium text-white cursor-pointer' %>
+              <% end %>
             <% end %>
           <% end %>
         <% end %>

@@ -21,6 +21,15 @@ Rails.application.routes.draw do
   root 'home#index'
   resource :top_up, only: %i[create]
   resources :transactions, only: %i[index]
+  # resource :cart, only: [:show] do
+  #   post 'add_item/:id', action: :add_item
+  #   patch :update_item
+  #   delete :remove_item
+  # end
+  resource :cart, only: :show do
+    post 'add_item/:product_id', to: 'carts#add_item', as: 'add_item'
+    delete 'remove_item/:item_id', to: 'carts#remove_item', as: 'remove_item'
+  end
   Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end

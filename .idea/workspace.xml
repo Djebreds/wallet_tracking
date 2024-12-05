@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: create transaction history pages">
-      <change afterPath="$PROJECT_DIR$/app/views/shared/components/_date_range_picker.html.erb" afterDir="false" />
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: add condition when user is not being authenticated">
+      <change afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/carts_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/carts/_cart_card.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/carts_controller_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_filter.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_filter.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/transactions/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/transactions/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_product_card.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product_card.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_navbar.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +155,7 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="88441000" />
+      <workItem from="1733073260358" duration="99888000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add image url to product table">
       <option name="closed" value="true" />
@@ -327,14 +333,69 @@
       <option name="project" value="LOCAL" />
       <updated>1733328283611</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: update filter component to make it more dynamic">
+      <option name="closed" value="true" />
+      <created>1733372547015</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733372547015</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: implement filter for status and payment method on transaction">
+      <option name="closed" value="true" />
+      <created>1733372567738</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733372567738</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: cart &amp; cart item models">
+      <option name="closed" value="true" />
+      <created>1733377871633</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733377871633</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: cart &amp; cart item models">
+      <option name="closed" value="true" />
+      <created>1733377882078</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733377882078</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat: cart &amp; cart item models">
+      <option name="closed" value="true" />
+      <created>1733384421350</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733384421350</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat: create stimulus controller for dropdown">
+      <option name="closed" value="true" />
+      <created>1733384451233</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733384451233</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: add condition when user is not being authenticated">
+      <option name="closed" value="true" />
+      <created>1733384491087</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733384491087</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: add image url to product table" />
     <MESSAGE value="feat: add description to product table" />
     <MESSAGE value="feat: change cron job to every one hour" />
     <MESSAGE value="feat: implement searching, filtering and pagination for products" />
@@ -355,6 +416,11 @@
     <MESSAGE value="feat: update filter to make it reusable" />
     <MESSAGE value="feat: create header component" />
     <MESSAGE value="feat: create transaction history pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: create transaction history pages" />
+    <MESSAGE value="feat: update filter component to make it more dynamic" />
+    <MESSAGE value="feat: implement filter for status and payment method on transaction" />
+    <MESSAGE value="feat: cart &amp; cart item models" />
+    <MESSAGE value="feat: create stimulus controller for dropdown" />
+    <MESSAGE value="feat: add condition when user is not being authenticated" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add condition when user is not being authenticated" />
   </component>
 </project>

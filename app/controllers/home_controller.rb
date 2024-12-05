@@ -3,6 +3,7 @@
 # Handles home page
 class HomeController < ApplicationController
   allow_unauthenticated_access
+  before_action :set_cart, if: :authenticated?
 
   def index
     products_query = Product.all
