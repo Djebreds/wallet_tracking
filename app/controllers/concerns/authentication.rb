@@ -23,6 +23,8 @@ module Authentication
   end
 
   def current_user
+    return unless authenticated?
+
     authenticated?.user
   end
 
