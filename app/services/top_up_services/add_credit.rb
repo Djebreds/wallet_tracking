@@ -14,6 +14,7 @@ module TopUpServices
         validate_amount!
         user.update_credit(amount)
         user.create_transaction(user, amount, :top_up, payment_method)
+        true
       end
     rescue StandardError => e
       Rails.logger.error e.message

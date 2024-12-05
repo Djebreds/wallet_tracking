@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Handles transactions
 class TransactionsController < ApplicationController
   before_action :authenticated?
   before_action :set_cart, if: :authenticated?
@@ -9,9 +10,7 @@ class TransactionsController < ApplicationController
     @statuses = humanize_statuses
 
     transactions_query = current_user.transactions
-    transactions_query = filter_by_type(transactions_query)
-    transactions_query = filter_by_status(transactions_query)
-    transactions_query = filter_by_date_range(transactions_query)
+    transactions_query = apply_filters(transactions_query)
 
     @pagy, @transactions = pagy(transactions_query, page: params[:page], limit: 8)
   end
@@ -20,24 +19,39 @@ class TransactionsController < ApplicationController
     total = purchase_params[:total].to_d
     payment_method = purchase_params[:payment_method]
 
-    if current_user.credit < total
-      redirect_to root_path, alert: 'Insufficient credit'
-      return
-    end
+    handle_insufficient_credit and return if insufficient_credit?(total)
 
-    purchase = TransactionServices::PurchaseService.call(current_user, total, payment_method, @cart_items)
-
-    if purchase
-      redirect_to root_path, notice: 'Purchase completed successfully!'
-    else
-      redirect_to root_path, alert: 'Failed to purchase!'
-    end
+    handle_purchase_result(
+      TransactionServices::PurchaseService.call(current_user, total, payment_method, @cart_items)
+    )
   end
 
   private
 
+  def apply_filters(transactions_query)
+    transactions_query = filter_by_type(transactions_query)
+    transactions_query = filter_by_status(transactions_query)
+    filter_by_date_range(transactions_query)
+  end
+
   def purchase_params
     params.permit(:payment_method, :total)
+  end
+
+  def insufficient_credit?(total)
+    current_user.credit < total
+  end
+
+  def handle_insufficient_credit
+    redirect_to root_path, alert: t('transaction.insufficient_credit')
+  end
+
+  def handle_purchase_result(purchase_success)
+    if purchase_success
+      redirect_to root_path, notice: t('transaction.purchase_complete')
+    else
+      redirect_to root_path, alert: t('transaction.purchase_failed')
+    end
   end
 
   def filter_by_type(transactions)

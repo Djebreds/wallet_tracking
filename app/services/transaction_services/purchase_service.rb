@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module TransactionServices
+  # Perform purchase for user
   class PurchaseService < ApplicationService
     def initialize(user, total, payment_method, items)
       @user = user

@@ -2,25 +2,21 @@
   <div class="py-2 px-3 mt-2 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block flex gap-3 items-center justify-between" id="alert" data-controller="flash" data-flash-target="closeFlash">
     <span class="flex gap-3 items-center">
       <%= heroicon 'bell-alert', options: { class: 'h-7 w-7' } %>
-      <%= flash[:alert]  %>
+      <%= flash[:alert] %>
     </span>
     <a href="#" data-action="click->flash#toggle">
       <%= heroicon 'x-mark', options: { class: 'h-7 w-7' } %>
     </a>
   </div>
 <% end %>
-
 <% if flash[:notice] %>
   <div class="py-2 px-3 mt-2 bg-blue-50 mb-5 text-blue-500 font-medium rounded-lg inline-block flex gap-3 items-center justify-between" id="notice" data-controller="flash" data-flash-target="closeFlash">
     <span class="flex gap-3 items-center">
       <%= heroicon 'bell-alert', options: { class: 'h-7 w-7' } %>
-      <%= flash[:notice]  %>
+      <%= flash[:notice] %>
     </span>
     <a href="#" data-action="click->flash#toggle">
       <%= heroicon 'x-mark', options: { class: 'h-7 w-7' } %>
     </a>
   </div>
 <% end %>
-
-
-
