@@ -1,22 +1,32 @@
 <div class="flex justify-between space-x-4">
   <% if filter %>
-    <div class="my-5">
-      <div class="pt-2 relative mx-auto text-gray-600">
-        <%= form_with method: :get do |form| %>
-          <%= form.select filter[:field].to_sym,
-                          options_from_collection_for_select(filter[:collections], :id, :name, selected: params[filter[:field]]),
-                          { prompt: filter[:placeholder] },
-                          onchange: 'this.form.submit();',
-                          class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500' %>
-        <% end %>
+    <% filter.each do |f| %>
+      <div class="my-5">
+        <div class="pt-2 relative mx-auto text-gray-600">
+          <%= form_with method: :get do |form| %>
+            <% params.except('controller', 'action', f[:field]).each do |key, value| %>
+              <%= form.hidden_field key, value: value %>
+            <% end %>
+            
+            <%= form.select f[:field].to_sym,
+                            options_from_collection_for_select(f[:collections], :id, :name, selected: params[f[:field]]),
+                            { prompt: f[:placeholder] },
+                            onchange: 'this.form.submit();',
+                            class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500' %>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
   
   <% if search %>
     <div class="my-5">
       <div class="pt-2 relative mx-auto text-gray-600">
         <%= form_with method: :get do |form| %>
+          <% params.except('controller', 'action', search[:field]).each do |key, value| %>
+            <%= form.hidden_field key, value: value %>
+          <% end %>
+          
           <%= form.search_field search[:field].to_sym, class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500',
                                 placeholder: search[:placeholder],
                                 value: params[search[:field]],
@@ -25,6 +35,32 @@
         <button type="button" class="absolute right-0 top-0 mt-5 mr-4">
           <%= heroicon 'magnifying-glass', options: { class: 'h-4 w-4' } %>
         </button>
+      </div>
+    </div>
+  <% end %>
+  
+  <% if date_filter %>
+    <div class="my-5">
+      <div class="pt-2 relative mx-auto text-gray-600">
+        <%= form_with method: :get do |form| %>
+          <% params.except('controller', 'action', date_filter[:field]).each do |key, value| %>
+            <%= form.hidden_field key, value: value %>
+          <% end %>
+          
+          <div class="flex space-x-4">
+            <%= form.date_field date_filter[:start_field].to_sym,
+                                class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500',
+                                placeholder: date_filter[:start_placeholder],
+                                value: params[date_filter[:start_field]],
+                                onchange: 'this.form.submit();' %>
+            
+            <%= form.date_field date_filter[:end_field].to_sym,
+                                class: 'border border-gray-300 bg-white h-10 px-5 pr-16 rounded-full text-sm focus:border-indigo-500',
+                                placeholder: date_filter[:end_placeholder],
+                                value: params[date_filter[:end_field]],
+                                onchange: 'this.form.submit();' %>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>

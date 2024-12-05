@@ -7,11 +7,14 @@
                    field: :search,
                    placeholder: 'Search...',
                  },
-                 filter: {
+                 filter: [
+                   {
                    field: :category,
                    collections: @categories,
                    placeholder: 'Select Category'
-                 } %>
+                  }
+                 ],
+                 date_filter: false %>
     </div>
     <% if @products.present? %>
       <div class="grid grid-cols sm:grid-cols-3 md:grid-cols-4 gap-3 justify-center">
