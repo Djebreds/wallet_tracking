@@ -14,4 +14,22 @@ class ApplicationController < ActionController::Base
 
     @total_price = @cart_items.sum { |item| item.product.price * item.quantity }
   end
+
+  def humanize_transaction_types
+    Transaction.transaction_types.keys.map do |key|
+      Struct.new(:id, :name).new(key, key.humanize)
+    end
+  end
+
+  def humanize_statuses
+    Transaction.statuses.keys.map do |key|
+      Struct.new(:id, :name).new(key, key.humanize)
+    end
+  end
+
+  def humanize_payment_methods
+    Transaction.payment_methods.keys.map do |key|
+      Struct.new(:id, :name).new(key, key.humanize)
+    end
+  end
 end

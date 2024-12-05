@@ -12,7 +12,8 @@ class Transaction < ApplicationRecord
   }
 
   enum :payment_method, {
-    in_app_top_up: 'in-app-top-up'
+    in_app_top_up: 'in-app-top-up',
+    wallet: 'wallet'
   }
 
   enum :status, {

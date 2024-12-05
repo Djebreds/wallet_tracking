@@ -1,0 +1,10 @@
+<div class="flex h-[5rem] gap-2 overflow-hidden rounded-lg border px-2 py-1">
+  <%= image_tag item.product.image_url, alt: item.product.name, class: 'object-cover cursor-pointer p-1', loading: 'lazy' %>
+  <div class="group space-y-2 truncate">
+    <h5 class="truncate text-sm"><%= item.product.name %></h5>
+    <div class="flex justify-between">
+      <h5 class="font-semibold text-red-500">$ <%= item.product.price %></h5>
+      <h5 class="font-semibold text-sm">x <%= item.quantity %></h5>
+    </div>
+  </div>
+</div>

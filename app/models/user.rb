@@ -26,4 +26,14 @@ class User < ApplicationRecord
       status: :confirmed
     )
   end
+
+  def purchase_transaction(user, total, transaction_type, payment_method)
+    transaction.create!(
+      user_id: user.id,
+      amount: total,
+      transaction_type:,
+      payment_method:,
+      status: :confirmed
+    )
+  end
 end
