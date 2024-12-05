@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: implement add item to cart and remove item from cart">
-      <change afterPath="$PROJECT_DIR$/app/services/transaction_services/purchase_service.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/carts/_checkout_card_item.html.erb" afterDir="false" />
+    <list default="true" id="cf4ed318-421d-4d96-ac50-2deaba876a67" name="Changes" comment="feat: implement purchase functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/top_ups_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/top_ups_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/transactions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/carts_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/carts_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/transaction.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/transaction.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/top_up_services/add_credit.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/top_up_services/add_credit.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/components/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/components/_navbar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/carts_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/carts_controller_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +28,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views/products" />
@@ -157,7 +146,8 @@
       <workItem from="1732942155853" duration="3296000" />
       <workItem from="1732946088792" duration="1544000" />
       <workItem from="1732948936221" duration="11371000" />
-      <workItem from="1733073260358" duration="106712000" />
+      <workItem from="1733073260358" duration="108717000" />
+      <workItem from="1733855747342" duration="2164000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add image url to product table">
       <option name="closed" value="true" />
@@ -399,15 +389,29 @@
       <option name="project" value="LOCAL" />
       <updated>1733384653551</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="feat: update top up functionality">
+      <option name="closed" value="true" />
+      <created>1733392008602</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733392008602</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: implement purchase functionality">
+      <option name="closed" value="true" />
+      <created>1733392086159</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733392086159</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: change cron job to every one hour" />
-    <MESSAGE value="feat: implement searching, filtering and pagination for products" />
     <MESSAGE value="chore: configure stimulus hotwire" />
     <MESSAGE value="feat: create modal component" />
     <MESSAGE value="feat: update reference column on transaction user" />
@@ -431,6 +435,8 @@
     <MESSAGE value="feat: create stimulus controller for dropdown" />
     <MESSAGE value="feat: add condition when user is not being authenticated" />
     <MESSAGE value="feat: implement add item to cart and remove item from cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implement add item to cart and remove item from cart" />
+    <MESSAGE value="feat: update top up functionality" />
+    <MESSAGE value="feat: implement purchase functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implement purchase functionality" />
   </component>
 </project>

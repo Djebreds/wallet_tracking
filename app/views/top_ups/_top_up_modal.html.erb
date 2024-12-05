@@ -2,11 +2,7 @@
   <div class="group grid gap-3">
     <div class="group grid">
       <%= form.label :amount %>
-      <%= form.number_field :amount, required: true,
-                            placeholder: 'Enter amount',
-                            class: 'rounded-lg focus:border-indigo-600',
-                            step: '0.01',
-                            max: '99999,99' %>
+      <%= form.number_field :amount, required: true, placeholder: 'Enter amount', class: 'rounded-lg focus:border-indigo-600', step: '0.01', max: '99999,99' %>
     </div>
     <div class="group grid">
       <%= form.label :payment_method, 'Payment Method' %>

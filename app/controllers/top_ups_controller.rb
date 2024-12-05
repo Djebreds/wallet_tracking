@@ -8,26 +8,26 @@ class TopUpsController < ApplicationController
     amount = top_up_params[:amount].to_d
     payment_method = top_up_params[:payment_method]
 
-    validate_amount!(amount)
-    validate_payment_method!(payment_method)
+    handle_invalid_amount and return if invalid_amount?(amount)
+    handle_invalid_payment_method and return if valid_payment_method?(amount)
 
     add_credit = TopUpServices::AddCredit.call(current_user, amount, payment_method)
 
     if add_credit
-      redirect_to root_path, notice: 'Your credit has been successfully updated!'
+      redirect_to root_path, notice: t('top_up.top_up_successfully')
     else
-      redirect_to top_up_path, alert: 'Failed to topup your account.'
+      redirect_to top_up_path, alert: t('top_up.top_up_failed')
     end
   end
 
   private
 
-  def validate_amount!(amount)
-    redirect_to root_path, alert: 'Amount must be a valid positive number.' if invalid_amount?(amount)
+  def handle_invalid_amount
+    redirect_to root_path, alert: t('top_up.amount_must_be_positive')
   end
 
-  def validate_payment_method!(payment_method)
-    redirect_to root_path, alert: 'Invalid payment method' unless invalid_payment_method?(payment_method)
+  def handle_invalid_payment_method
+    redirect_to root_path, alert: t('top_up.invalid_payment_method')
   end
 
   def top_up_params
@@ -38,7 +38,7 @@ class TopUpsController < ApplicationController
     !amount.is_a?(Numeric) || amount <= 0
   end
 
-  def invalid_payment_method?(payment_method)
+  def valid_payment_method?(payment_method)
     Transaction.payment_methods.key?(payment_method)
   end
 end
