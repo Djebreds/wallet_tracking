@@ -41,3 +41,17 @@ en:
     failed_signin: 'Try another email address or password.'
     limit_signin: 'Try again later.'
     mailer_password_reset: 'You can reset your password within the next 15 minutes on'
+  transaction:
+    purchase_complete: 'Purchase completed successfully!'
+    purchase_failed: 'Failed to purchase!'
+    insufficient_credit: 'Insufficient credit'
+  top_up:
+    top_up_successfully: 'Your credit has been successfully updated!'
+    top_up_failed: 'Failed to top up your account.'
+    amount_must_be_positive: 'Amount must be a valid positive number.'
+    invalid_payment_method: 'Invalid payment method'
+  cart:
+    added_to_cart: '%{product} added to cart.'
+    failed_add_to_cart: 'Unable to add product to cart.'
+    item_removed: 'Item removed from cart.'
+    failed_to_remove_item: 'Unable to remove item from cart.'

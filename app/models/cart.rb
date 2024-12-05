@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Represent cart model
 class Cart < ApplicationRecord
   belongs_to :user
 

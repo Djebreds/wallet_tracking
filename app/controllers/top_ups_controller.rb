@@ -14,20 +14,20 @@ class TopUpsController < ApplicationController
     add_credit = TopUpServices::AddCredit.call(current_user, amount, payment_method)
 
     if add_credit
-      redirect_to root_path, notice: 'Your credit has been successfully updated!'
+      redirect_to root_path, notice: t('top_up.top_up_successfully')
     else
-      redirect_to top_up_path, alert: 'Failed to topup your account.'
+      redirect_to top_up_path, alert: t('top_up.top_up_failed')
     end
   end
 
   private
 
   def validate_amount!(amount)
-    redirect_to root_path, alert: 'Amount must be a valid positive number.' if invalid_amount?(amount)
+    redirect_to root_path, alert: t('top_up.amount_must_be_positive') if invalid_amount?(amount)
   end
 
   def validate_payment_method!(payment_method)
-    redirect_to root_path, alert: 'Invalid payment method' unless invalid_payment_method?(payment_method)
+    redirect_to root_path, alert: t('top_up.invalid_payment_method') unless invalid_payment_method?(payment_method)
   end
 
   def top_up_params

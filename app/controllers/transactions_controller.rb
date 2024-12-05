@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Handles transactions
 class TransactionsController < ApplicationController
   before_action :authenticated?
   before_action :set_cart, if: :authenticated?
@@ -20,21 +21,22 @@ class TransactionsController < ApplicationController
     total = purchase_params[:total].to_d
     payment_method = purchase_params[:payment_method]
 
-    if current_user.credit < total
-      redirect_to root_path, alert: 'Insufficient credit'
-      return
-    end
+    validate_user_credit!(total)
 
     purchase = TransactionServices::PurchaseService.call(current_user, total, payment_method, @cart_items)
 
     if purchase
-      redirect_to root_path, notice: 'Purchase completed successfully!'
+      redirect_to root_path, notice: t('transaction.purchase_complete')
     else
-      redirect_to root_path, alert: 'Failed to purchase!'
+      redirect_to root_path, alert: t('transaction.purchase_failed')
     end
   end
 
   private
+
+  def validate_user_credit!(total)
+    redirect_to root_path, alert: t('transaction.insufficient_credit') if current_user.credit < total
+  end
 
   def purchase_params
     params.permit(:payment_method, :total)
