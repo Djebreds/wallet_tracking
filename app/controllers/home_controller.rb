@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   before_action :set_cart, if: :authenticated?
 
   def index
-    products_query = Product.all
+    products_query = Product.includes(:category)
     product_search_query(products_query, params[:search])
     products_query = products_query.where(category_id: params[:category]) if params[:category].present?
 
