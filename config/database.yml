@@ -22,7 +22,6 @@ default: &default
   username: dev
   password: dev@developer
 
-
 development:
   <<: *default
   database: wallet_tracking_development
@@ -86,18 +85,19 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: wallet_tracking_production
-    username: wallet_tracking
-    password: <%= ENV["WALLET_TRACKING_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DB_URL"] %>
   cache:
     <<: *primary_production
     database: wallet_tracking_production_cache
     migrations_paths: db/cache_migrate
+    url: <%= ENV["DB_URL"] %>
   queue:
     <<: *primary_production
     database: wallet_tracking_production_queue
     migrations_paths: db/queue_migrate
+    url: <%= ENV["DB_URL"] %>
   cable:
     <<: *primary_production
     database: wallet_tracking_production_cable
     migrations_paths: db/cable_migrate
+    url: <%= ENV["DB_URL"] %>
